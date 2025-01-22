@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "hyprland-dispatcher"
+version = "0.1.0"
+description = "A simple service meant to provide callbacks to Hyprland events"
+authors = ["Sam Koepnick <sam@koepnick.io>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+  { include = "hyprland_dispatcher", from = "src" }
+]
+
+[tool.poetry.scripts]
+hyprland-dispatcher = "hyprland_dispatcher.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
